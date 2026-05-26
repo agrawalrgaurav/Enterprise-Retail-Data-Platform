@@ -25,4 +25,3 @@ KNIME ETL → SQL Database → Power BI Dashboard
 - Implemented scalable data models
 - Enabled near real-time reporting
 - Designed enterprise-level dashboards
-``
