@@ -1,0 +1,22 @@
+        ┌────────────────────────┐
+        │   Data Sources         │
+        │ (CSV + API Streams)   │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ KNIME ETL Pipelines    │
+        │ - Cleaning             │
+        │ - Transformation       │
+        │ - Incremental Load     │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ SQL Database (Azure)   │
+        │ - Fact + Dimensions    │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ Power BI Dashboard     │
+        │ - KPIs                 │
+        │ - Drilldowns           │
+        └────────────────────────┘
