@@ -4,7 +4,29 @@
 Designed and implemented an end-to-end data engineering and analytics platform using KNIME, SQL, and Power BI.
 
 ## Architecture
-KNIME ETL → SQL Database → Power BI Dashboard
+
+        ┌────────────────────────┐
+        │   Data Sources         │
+        │ (CSV + API Streams)    │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ KNIME ETL Pipelines    │
+        │ - Cleaning             │
+        │ - Transformation       │
+        │ - Incremental Load     │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ SQL Database (Azure)   │
+        │ - Fact + Dimensions    │
+        └─────────┬──────────────┘
+                  ↓
+        ┌────────────────────────┐
+        │ Power BI Dashboard     │
+        │ - KPIs                 │
+        │ - Drilldowns           │
+        └────────────────────────┘
 
 ## Key Features
 - Incremental data loading (CDC)
